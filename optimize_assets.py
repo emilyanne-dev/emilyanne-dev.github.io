@@ -102,8 +102,8 @@ for p in sorted(glob.glob(f"{IMG}/social/*.png")):
 for p in sorted(glob.glob(f"{IMG}/social/*.jpg")):
     do_jpeg(p, cap=1500, q=86)
 
-# ---- portrait ----
-do_png_to_jpeg(f"{IMG}/about/emily.png", cap=1000, q=88)
+# ---- portrait: stays PNG so generate.py needs no edit ----
+do_png(f"{IMG}/about/emily.png", cap=900)
 
 report.sort(reverse=True)
 print(f"{'before':>9} {'after':>9}  file")
@@ -111,6 +111,22 @@ for b, a, name in report:
     print(f"{b:>7}KB {a:>7}KB  {name}")
 tb, ta = sum(r[0] for r in report), sum(r[1] for r in report)
 print(f"\nTOTAL  {tb/1024:.1f}MB -> {ta/1024:.1f}MB  ({100 - ta * 100 // tb}% smaller)")
-print("\nRENAMES (JSON/HTML must be updated):")
-for k, v in sorted(renames.items()):
-    print(f"  {k} -> {v}")
+
+# ---- point films.json at the new .jpg names ----
+if renames:
+    import json
+
+    fp = os.path.join(ROOT, "data/films.json")
+    with open(fp, encoding="utf-8") as f:
+        films = json.load(f)
+    changed = 0
+    for film in films:
+        if film.get("thumb") in renames:
+            film["thumb"] = renames[film["thumb"]]
+            changed += 1
+    with open(fp, "w", encoding="utf-8") as f:
+        json.dump(films, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+    print(f"\nRenamed {len(renames)} file(s); updated {changed} thumb "
+          f"reference(s) in data/films.json.")
+    print("Now run: python3 generate.py")
