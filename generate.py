@@ -366,6 +366,32 @@ def build_resume(r):
     write("resume.html", html)
 
 
+def build_sitemap(films, social):
+    """Sitemap and robots.txt so search engines can find every page.
+
+    Skips 404.html — an error page shouldn't be indexed.
+    """
+    paths = ["", "social.html", "photography.html", "about.html", "resume.html"]
+    paths += [f"films/{f['slug']}.html" for f in films]
+    paths += [f"social/{s['slug']}.html" for s in social]
+
+    today = datetime.date.today().isoformat()
+    urls = "".join(
+        f"\n  <url><loc>{SITE_URL}/{p}</loc><lastmod>{today}</lastmod></url>"
+        for p in paths
+    )
+    write("sitemap.xml", f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}
+</urlset>
+""")
+
+    write("robots.txt", f"""User-agent: *
+Allow: /
+
+Sitemap: {SITE_URL}/sitemap.xml
+""")
+
+
 if __name__ == "__main__":
     films = json.loads(read("data/films.json"))
     photos = json.loads(read("data/photography.json"))
@@ -379,4 +405,5 @@ if __name__ == "__main__":
     build_about()
     build_resume(resume)
     build_404()
-    print(f"Built index.html, social.html, photography.html, about.html, resume.html, 404.html, {len(films)} film pages, and {len(social)} social pages.")
+    build_sitemap(films, social)
+    print(f"Built index.html, social.html, photography.html, about.html, resume.html, 404.html, sitemap.xml, robots.txt, {len(films)} film pages, and {len(social)} social pages.")
