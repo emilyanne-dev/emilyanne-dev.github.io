@@ -31,7 +31,7 @@ YEAR = str(datetime.date.today().year)
 # Open Graph requires absolute URLs — link previews stay blank until this
 # is set. Fill in once the domain is pointed at GitHub Pages, e.g.
 # "https://emilysaralealberti.com", then re-run this script.
-SITE_URL = ""
+SITE_URL = "https://emilysaralealberti.com"
 
 
 def render_page(title, content, prefix="", active=""):
