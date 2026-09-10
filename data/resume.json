@@ -3,9 +3,21 @@
   "role": "Creative Producer",
   "about": "With almost a decade of experience, I'm a resourceful and strategic Creative Producer with a passion for crafting meaningful brand stories through video, photography, social, and experiential activations. At Instacart, I helped pioneer the transition from still to motion, scaling their production capabilities, building vendor relationships from scratch and shaping a scrappy, nimble creative team into a high-performing, story-driven content engine. I thrive at the intersection of logistics and creativity, and am always looking for what's next.",
   "contact": [
-    { "label": "Portfolio", "value": "saralealberti.com", "href": "https://saralealberti.com" },
-    { "label": "Email", "value": "emilyannesarale@gmail.com", "href": "mailto:emilyannesarale@gmail.com" },
-    { "label": "Based in", "value": "San Francisco, CA", "href": null }
+    {
+      "label": "Portfolio",
+      "value": "saralealberti.com",
+      "href": "https://saralealberti.com"
+    },
+    {
+      "label": "Email",
+      "value": "emilyannesarale@gmail.com",
+      "href": "mailto:emilyannesarale@gmail.com"
+    },
+    {
+      "label": "Based in",
+      "value": "San Francisco, CA",
+      "href": null
+    }
   ],
   "education": {
     "degree": "Bachelor of Arts in Journalism, Advertising",
@@ -35,7 +47,7 @@
   "experience": [
     {
       "company": "Instacart",
-      "title": "Creative Producer",
+      "title": "Senior Creative Producer",
       "dates": "November 2021 — Present",
       "bullets": [
         "Supported the evolution of Instacart's in-house production team by expanding capabilities from stills to live-action, while building scalable workflows in partnership with senior leadership.",
@@ -43,7 +55,8 @@
         "Built and maintain a trusted network of directors, editors and production vendors to support content across multiple channels.",
         "Collaborate with cross functional partners including creative, marketing, communications and product teams to bring campaigns from concept to final delivery.",
         "Manage full production lifecycles from brief through delivery, ensuring on-time delivery and high creative standards."
-      ]
+      ],
+      "honor": "Local Produce — Ad Age 2026 In-House Agency of the Year"
     },
     {
       "company": "Duncan Channon",

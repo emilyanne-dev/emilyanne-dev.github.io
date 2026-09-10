@@ -174,7 +174,7 @@ body.resume-body {
   margin: 0;
 }
 
-.r-job + .r-job { margin-top: 0.26in; }
+.r-job + .r-job { margin-top: 0.22in; }
 
 .r-job-head {
   display: flex;
@@ -212,7 +212,7 @@ body.resume-body {
   margin: 0.65em 0 0;
   padding: 0;
   font-size: 11px;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .r-job li {
@@ -220,7 +220,7 @@ body.resume-body {
   padding-left: 1.1em;
 }
 
-.r-job li + li { margin-top: 0.5em; }
+.r-job li + li { margin-top: 0.42em; }
 
 /* Asterisk bullet, echoing the marquee separator. */
 .r-job li::before {
@@ -312,4 +312,12 @@ body.resume-body {
   .r-body { grid-template-columns: 1fr; gap: 1.25rem; }
   .r-head h1 { font-size: 30px; }
   .r-ticker { display: none; }
+}
+
+/* Agency accolade beneath a role title. */
+.r-honor { margin-top: 0.5em; }
+.r-honor .credit-pill {
+  font-size: 8.5px;
+  padding: 0.32em 0.6em;
+  letter-spacing: 0.05em;
 }

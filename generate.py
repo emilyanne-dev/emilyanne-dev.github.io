@@ -283,6 +283,10 @@ def build_resume(r):
     jobs = []
     for j in r["experience"]:
         bullets = "".join(f"<li>{b}</li>" for b in j["bullets"])
+        honor = (
+            f'<div class="r-honor"><span class="credit-pill">{j["honor"]}</span></div>'
+            if j.get("honor") else ""
+        )
         jobs.append(f"""
         <article class="r-job">
           <div class="r-job-head">
@@ -292,6 +296,7 @@ def build_resume(r):
             </div>
             <span class="r-dates">{j['dates']}</span>
           </div>
+          {honor}
           <ul>{bullets}</ul>
         </article>""")
 
