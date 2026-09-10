@@ -1,0 +1,315 @@
+/* ---------------------------------------------------------------
+   Resume — print-first sheet that borrows the site's tokens and
+   .credit-pill component from style.css (loaded first).
+
+   Sized for US Letter at 96dpi (816 x 1056px) so what you see on
+   screen is what lands in the PDF. Print with Cmd+P → Save as PDF,
+   margins "None", background graphics ON.
+   --------------------------------------------------------------- */
+
+body.resume-body {
+  background: var(--cocoa);
+  padding: 2rem 1rem;
+  font-size: 15px;
+}
+
+.sheet {
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto;
+  padding: 0.45in 0.5in 0.4in;
+  background: var(--cream);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- masthead ---------- */
+.r-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.r-head h1 {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 43px;
+  letter-spacing: -0.01em;
+}
+
+.r-role {
+  margin: 0;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 10px;
+  border: 1px dashed var(--ink);
+  border-radius: 999px;
+  padding: 0.4em 0.9em;
+  white-space: nowrap;
+}
+
+/* Ink ribbon under the name — the site's marquee, held still. */
+.r-ticker {
+  margin-top: 0.28in;
+  background: var(--ink);
+  color: var(--cream);
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.5em 0.85em;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 8.5px;
+  overflow: hidden;
+}
+
+.r-ticker span { white-space: nowrap; }
+
+/* ---------- two columns ---------- */
+.r-body {
+  margin-top: 0.3in;
+  display: grid;
+  grid-template-columns: 2.3in 1fr;
+  gap: 0.34in;
+  align-items: start;
+}
+
+.r-side {
+  background: var(--cream-2);
+  border: 2px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--shadow);
+  padding: 0.22in 0.2in 0.26in;
+}
+
+.r-block + .r-block { margin-top: 0.25in; }
+
+.r-block h2 {
+  font-style: italic;
+  font-size: 18px;
+  padding-bottom: 0.35em;
+  border-bottom: 1px dashed var(--ink);
+  margin-bottom: 0.6em;
+}
+
+.r-main .r-block h2 { font-size: 22px; }
+
+/* ---------- sidebar contents ---------- */
+.r-contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.r-contact li + li { margin-top: 0.6em; }
+
+.r-contact b {
+  display: block;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 8.5px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.r-contact a { text-decoration: none; border-bottom: 1px solid var(--line); }
+
+.r-edu { font-size: 11px; line-height: 1.5; margin: 0; }
+.r-edu strong { display: block; font-weight: 700; }
+.r-edu span { font-style: italic; font-family: var(--font-display); font-size: 13px; }
+
+/* Skills run long enough that dashed pills would wrap mid-phrase, so
+   they get the same asterisk markers as the experience bullets. */
+.r-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+.r-list li {
+  position: relative;
+  padding-left: 1.05em;
+}
+
+.r-list li + li { margin-top: 0.5em; }
+
+.r-list li::before {
+  content: "✳";
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  color: var(--accent);
+  font-size: 9px;
+}
+
+.r-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38em;
+}
+
+/* Tighter take on the site's dashed credit chip, for short tokens. */
+.r-pills .credit-pill {
+  font-size: 9px;
+  padding: 0.36em 0.68em;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+}
+
+/* ---------- main column ---------- */
+.r-about {
+  font-size: 11.5px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.r-job + .r-job { margin-top: 0.26in; }
+
+.r-job-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.3em;
+}
+
+.r-job-head h3 {
+  font-style: italic;
+  font-size: 17px;
+}
+
+.r-job-head .r-co {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.r-dates {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.r-job ul {
+  list-style: none;
+  margin: 0.65em 0 0;
+  padding: 0;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.r-job li {
+  position: relative;
+  padding-left: 1.1em;
+}
+
+.r-job li + li { margin-top: 0.5em; }
+
+/* Asterisk bullet, echoing the marquee separator. */
+.r-job li::before {
+  content: "✳";
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  color: var(--accent);
+  font-size: 9px;
+}
+
+/* ---------- screen-only affordance ---------- */
+.print-hint {
+  max-width: 8.5in;
+  margin: 0 auto 1rem;
+  color: var(--cream);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.print-hint a { color: var(--gold); }
+
+.print-hint button {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--accent);
+  color: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 0.55em 1.1em;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.print-hint button:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+
+/* ---------- print ---------- */
+@page {
+  size: letter;
+  margin: 0;
+}
+
+@media print {
+  html, body.resume-body {
+    background: var(--cream);
+    padding: 0;
+    margin: 0;
+  }
+
+  .print-hint { display: none; }
+
+  .sheet {
+    border: 0;
+    box-shadow: none;
+    margin: 0;
+    width: 8.5in;
+    min-height: 0;
+    /* Trade the sheet border for real paper margins. */
+    padding: 0.5in 0.55in;
+  }
+
+  /* Keep the mats and the ink ribbon from being stripped out. */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .r-job, .r-block { break-inside: avoid; }
+}
+
+/* ---------- small screens ---------- */
+@media screen and (max-width: 900px) {
+  body.resume-body { padding: 1rem 0.5rem; }
+
+  .sheet {
+    width: 100%;
+    min-height: 0;
+    padding: 1.25rem 1rem;
+  }
+
+  .r-body { grid-template-columns: 1fr; gap: 1.25rem; }
+  .r-head h1 { font-size: 30px; }
+  .r-ticker { display: none; }
+}

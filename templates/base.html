@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{TITLE}}</title>
+<meta name="description" content="Emily Sarale Alberti — Creative Producer. Commercials, branded films, and photography." />
+<link rel="icon" href="{{PREFIX}}assets/favicon.svg" type="image/svg+xml" />
+<meta name="theme-color" content="#fbe9c8" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Emily Sarale Alberti" />
+<meta property="og:title" content="{{TITLE}}" />
+<meta property="og:description" content="Emily Sarale Alberti — Creative Producer. Commercials, branded films, social, and photography." />
+<meta property="og:image" content="{{SITE_URL}}/assets/images/og-card.jpg" />
+<meta property="og:url" content="{{SITE_URL}}/" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{PREFIX}}assets/css/style.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="wordmark" href="{{PREFIX}}index.html">emily sarale alberti</a>
+    <button class="nav-toggle">Menu</button>
+    <ul class="nav-links">
+      <li><a href="{{PREFIX}}index.html" class="{{ACTIVE_FILMS}}">Films</a></li>
+      <li><a href="{{PREFIX}}social.html" class="{{ACTIVE_SOCIAL}}">Social &amp; Activations</a></li>
+      <li><a href="{{PREFIX}}photography.html" class="{{ACTIVE_PHOTO}}">Photography</a></li>
+      <li><a href="{{PREFIX}}about.html" class="{{ACTIVE_ABOUT}}">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>✳ Creative Producer</span>
+      <span>✳ Commercials &amp; Branded Films</span>
+      <span>✳ Photography</span>
+      <span>✳ Social Media</span>
+      <span>✳ Events &amp; Activations</span>
+      <span>✳ Based in San Francisco</span>
+    </div>
+  </div>
+
+{{CONTENT}}
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>Site Map</h4>
+        <a href="{{PREFIX}}index.html">Films</a>
+        <a href="{{PREFIX}}social.html">Social &amp; Activations</a>
+        <a href="{{PREFIX}}photography.html">Photography</a>
+        <a href="{{PREFIX}}about.html">About</a>
+        <a href="{{PREFIX}}resume.html">R&eacute;sum&eacute;</a>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <a href="https://www.instagram.com/emsarale/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/emily-sarale-70962bb6/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="footer-col">
+        <h4>Say Hello</h4>
+        <a href="mailto:emilyannesarale@gmail.com">emilyannesarale@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; {{YEAR}} Emily Sarale Alberti</div>
+  </footer>
+
+  <script src="{{PREFIX}}assets/js/main.js"></script>
+</body>
+</html>
