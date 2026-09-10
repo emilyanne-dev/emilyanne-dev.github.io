@@ -239,7 +239,7 @@ def build_about():
         <div class="contact-card">
           <p class="eyebrow" style="color: var(--cocoa)">R&eacute;sum&eacute;</p>
           <div class="card-actions">
-            <a class="btn-accent" href="resume.html">View R&eacute;sum&eacute; &rarr;</a>
+            <a class="btn-accent" href="resume.html" target="_blank" rel="noopener">View R&eacute;sum&eacute; &rarr;</a>
             <a class="pill-btn" href="assets/files/emily-sarale-alberti-resume.pdf" download>&#8681; Download PDF</a>
           </div>
         </div>
