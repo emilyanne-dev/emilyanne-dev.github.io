@@ -6,7 +6,8 @@
   --ink: #1c1a17;     /* near-black — text, nav rule, footer */
   --cocoa: #33251a;   /* chocolate brown — About section */
   --accent: #dc6b1f;  /* burnt orange — buttons, play badge */
-  --gold: #f5c542;    /* golden yellow — pops on dark surfaces */
+  --gold: #f5c542;    /* golden yellow — pops on dark surfaces ONLY (1.2:1 on butter) */
+  --amber: #8f5208;   /* deep amber — the gold voice on light surfaces, 4.65:1 on --cream-2 */
   --line: rgba(28, 26, 23, 0.18);
   --shadow: rgba(28, 26, 23, 0.14);
 
@@ -386,7 +387,7 @@ h1, h2, h3 {
 .about-section h1 {
   font-style: italic;
   font-size: clamp(2.2rem, 5.5vw, 3.8rem);
-  color: var(--gold);
+  color: var(--amber);
   max-width: 16em;
 }
 
