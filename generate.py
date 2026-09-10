@@ -231,9 +231,6 @@ def build_about():
         <div class="about-bio">
           <p>Emily is a Creative Producer based in San Francisco in the marketing and advertising space with almost a decade of experience. Raised in a farming family, she currently enjoys working with food, beverage and beyond at Instacart as part of Local Produce, its in-house creative agency. In her free time, she enjoys experimenting in the kitchen. Have a recipe to share? Please drop below.</p>
         </div>
-        <div class="about-honor">
-          <span class="credit-pill"><b>Local Produce</b> &mdash; Ad Age 2026 In-House Agency of the Year</span>
-        </div>
         <div class="contact-card">
           <p class="eyebrow" style="color: var(--cocoa)">Say Hello</p>
           <p>Got a project, a recipe, or just want to say hi?</p>

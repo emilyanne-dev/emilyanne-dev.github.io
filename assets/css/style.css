@@ -512,13 +512,3 @@ h1, h2, h3 {
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
-
-/* Accolade chip under the About bio — same dashed language as the
-   credit rows on case studies. Spacing comes from .about-col's flex gap. */
-.about-honor { margin: 0; max-width: 34em; }
-
-/* On a phone the accolade wraps to three lines, where a stadium border
-   reads as stretched — square it up into a rounded rectangle. */
-@media (max-width: 640px) {
-  .about-honor .credit-pill { border-radius: 14px; line-height: 1.5; }
-}
