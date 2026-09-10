@@ -1,4 +1,4 @@
-# emilysaralealberti.com
+# saralealberti.com
 
 Portfolio site for Emily Sarale Alberti, Creative Producer.
 
@@ -55,10 +55,10 @@ browsers cache `style.css` aggressively.
 | --- | --- |
 | Host | GitHub Pages, `main` branch, `/` root |
 | Repo | `emilyanne-dev/emilyanne-dev.github.io` |
-| Domain | `emilysaralealberti.com` |
+| Domain | `saralealberti.com` |
 
 - `CNAME` holds the custom domain. **While it exists, `emilyanne-dev.github.io`
-  redirects to `emilysaralealberti.com`** — so if you need to preview on the
+  redirects to `saralealberti.com`** — so if you need to preview on the
   github.io URL before DNS resolves, temporarily rename `CNAME`.
 - `.nojekyll` stops GitHub from running Jekyll over the files.
 - `SITE_URL` in `generate.py` must match the live origin or link previews

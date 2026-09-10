@@ -30,8 +30,8 @@ YEAR = str(datetime.date.today().year)
 # Absolute origin of the live site, no trailing slash. Needed because
 # Open Graph requires absolute URLs — link previews stay blank until this
 # is set. Fill in once the domain is pointed at GitHub Pages, e.g.
-# "https://emilysaralealberti.com", then re-run this script.
-SITE_URL = "https://emilysaralealberti.com"
+# "https://saralealberti.com", then re-run this script.
+SITE_URL = "https://saralealberti.com"
 
 
 def render_page(title, content, prefix="", active=""):
