@@ -51,13 +51,37 @@ browsers cache `style.css` aggressively.
 
 ## Deployment
 
-Hosted on GitHub Pages from the `main` branch, repo root.
+| | |
+| --- | --- |
+| Host | GitHub Pages, `main` branch, `/` root |
+| Repo | `emilyanne-dev/emilyanne-dev.github.io` |
+| Domain | `emilysaralealberti.com` |
 
-- `CNAME` holds the custom domain. Deleting it reverts to the github.io URL.
+- `CNAME` holds the custom domain. **While it exists, `emilyanne-dev.github.io`
+  redirects to `emilysaralealberti.com`** — so if you need to preview on the
+  github.io URL before DNS resolves, temporarily rename `CNAME`.
 - `.nojekyll` stops GitHub from running Jekyll over the files.
 - `SITE_URL` in `generate.py` must match the live origin or link previews
   (Open Graph) break. Re-run `generate.py` after changing it.
 
+DNS at the registrar — four A records on the apex, one CNAME on `www`:
+
+```
+@     A      185.199.108.153
+@     A      185.199.109.153
+@     A      185.199.110.153
+@     A      185.199.111.153
+www   CNAME  emilyanne-dev.github.io
+```
+
 Because the site is served from the domain root, paths in `404.html` are
 absolute. If this is ever moved to a project-page URL such as
 `user.github.io/repo/`, those need revisiting.
+
+## Asset weight
+
+`optimize_assets.py` did a one-time pass taking `assets/images` from 63MB to
+22MB. Re-run it after adding photography, then check its before/after table —
+**re-encoding an already-compressed file can make it bigger.** Five files did
+grow and were reverted; if that happens again, restore them with
+`git checkout <commit> -- <path>`.
