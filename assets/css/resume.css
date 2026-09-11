@@ -314,10 +314,18 @@ body.resume-body {
   .r-ticker { display: none; }
 }
 
-/* Agency accolade beneath a role title. */
-.r-honor { margin-top: 0.5em; }
+/* Agency accolade beneath a role title.
+
+   inline-block matters: .credit-pill is a bare <span>, and elsewhere it
+   only behaves because a flex parent blockifies it. Left inline here, a
+   wrap splits the dashed border across line fragments. The softer radius
+   keeps a two-line chip from reading as a stretched stadium. */
+.r-honor { margin-top: 0.55em; }
 .r-honor .credit-pill {
+  display: inline-block;
   font-size: 8.5px;
-  padding: 0.32em 0.6em;
+  padding: 0.34em 0.65em;
   letter-spacing: 0.05em;
+  line-height: 1.45;
+  border-radius: 12px;
 }
