@@ -297,8 +297,10 @@ def build_resume(r):
           <ul>{bullets}</ul>
         </article>""")
 
-    ticker = "".join(
-        f"<span>✳ {bit}</span>"
+    # Asterisks are their own flex children, not prefixes — as prefixes,
+    # space-between dumps all the slack on one side of each one.
+    ticker = '<span class="r-sep">✳</span>'.join(
+        f"<span>{bit}</span>"
         for bit in [
             "Commercials &amp; Branded Films",
             "Social Media",
